@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>874599955184-gaq7qlb42u8g2fbg26h4k4btc3sg4ag0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.874599955184-gaq7qlb42u8g2fbg26h4k4btc3sg4ag0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAQE5iB29oxpR6NMb5cg6QeyxMiziG_56Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>874599955184</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.rcr.rambl</string>
+	<key>PROJECT_ID</key>
+	<string>rambl-1327</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rambl-1327.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:874599955184:ios:667ab2f9835523c8</string>
+	<key>DATABASE_URL</key>
+	<string>https://rambl-1327.firebaseio.com</string>
+</dict>
+</plist>

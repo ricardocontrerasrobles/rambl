@@ -7,13 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051638001E2C7415005A5156 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051637FF1E2C7415005A5156 /* MapKit.framework */; };
+		05169F8B1E306F46001C8835 /* RamblImplementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05169F8A1E306F46001C8835 /* RamblImplementor.swift */; };
+		05169F921E3074A2001C8835 /* ModelsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05169F911E3074A2001C8835 /* ModelsConstants.swift */; };
+		053BFAEE1E34240100C54B5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 053BFAED1E34240100C54B5A /* GoogleService-Info.plist */; };
+		053BFAF11E343EE000C54B5A /* RamblMKPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053BFAF01E343EE000C54B5A /* RamblMKPointAnnotation.swift */; };
+		053BFAF51E343FF500C54B5A /* RamblMKPinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053BFAF41E343FF500C54B5A /* RamblMKPinAnnotationView.swift */; };
+		057E2B201E33D27100BC518F /* Date+Rambl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057E2B1F1E33D27100BC518F /* Date+Rambl.swift */; };
 		05B69AD01E2AC8D100B52C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69ACF1E2AC8D100B52C1C /* AppDelegate.swift */; };
-		05B69AD21E2AC8D100B52C1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69AD11E2AC8D100B52C1C /* ViewController.swift */; };
-		05B69AD51E2AC8D100B52C1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B69AD31E2AC8D100B52C1C /* Main.storyboard */; };
-		05B69AD71E2AC8D100B52C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B69AD61E2AC8D100B52C1C /* Assets.xcassets */; };
-		05B69ADA1E2AC8D100B52C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B69AD81E2AC8D100B52C1C /* LaunchScreen.storyboard */; };
 		05B69AE51E2AC8D200B52C1C /* RamblTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69AE41E2AC8D200B52C1C /* RamblTests.swift */; };
 		05B69AF01E2AC8D200B52C1C /* RamblUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69AEF1E2AC8D200B52C1C /* RamblUITests.swift */; };
+		05B69B211E2B089500B52C1C /* AVFoundationAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B061E2B089500B52C1C /* AVFoundationAudioPlayer.swift */; };
+		05B69B221E2B089500B52C1C /* AVFoundationAudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B081E2B089500B52C1C /* AVFoundationAudioRecorder.swift */; };
+		05B69B231E2B089500B52C1C /* CoreLocationLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B0A1E2B089500B52C1C /* CoreLocationLocator.swift */; };
+		05B69B241E2B089500B52C1C /* FireBasePersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B0C1E2B089500B52C1C /* FireBasePersistor.swift */; };
+		05B69B261E2B089500B52C1C /* AWSS3Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B0F1E2B089500B52C1C /* AWSS3Uploader.swift */; };
+		05B69B271E2B089500B52C1C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B121E2B089500B52C1C /* AudioPlayer.swift */; };
+		05B69B281E2B089500B52C1C /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B131E2B089500B52C1C /* AudioRecorder.swift */; };
+		05B69B291E2B089500B52C1C /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B141E2B089500B52C1C /* Locator.swift */; };
+		05B69B2A1E2B089500B52C1C /* Persistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B151E2B089500B52C1C /* Persistor.swift */; };
+		05B69B2B1E2B089500B52C1C /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B161E2B089500B52C1C /* Uploader.swift */; };
+		05B69B2C1E2B089500B52C1C /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B181E2B089500B52C1C /* Chat.swift */; };
+		05B69B2D1E2B089500B52C1C /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B191E2B089500B52C1C /* Contribution.swift */; };
+		05B69B2E1E2B089500B52C1C /* Rambl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69B1A1E2B089500B52C1C /* Rambl.swift */; };
+		05C366341E2B0B2400B21C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C366331E2B0B2400B21C12 /* Main.storyboard */; };
+		05C366361E2B0B7D00B21C12 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05C366351E2B0B7D00B21C12 /* Splash.storyboard */; };
+		05C3663B1E2B0BAD00B21C12 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C366381E2B0BAD00B21C12 /* MainViewController.swift */; };
+		05C3663C1E2B0BAD00B21C12 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C3663A1E2B0BAD00B21C12 /* MainViewModel.swift */; };
+		05C3663E1E2B0D2F00B21C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C3663D1E2B0D2F00B21C12 /* Assets.xcassets */; };
+		05CD97141E340F480033C0A7 /* Geohash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD97121E340F480033C0A7 /* Geohash.swift */; };
+		05CD97151E340F480033C0A7 /* GeohashBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD97131E340F480033C0A7 /* GeohashBox.swift */; };
+		05D532351E347F7F0044B61F /* RamblLogicBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D532341E347F7F0044B61F /* RamblLogicBridge.swift */; };
+		2E493887AAC3F1906139DFD4 /* Pods_RamblTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB88B9E2C23C93C187B8169F /* Pods_RamblTests.framework */; };
+		5436B4676E8A6E991EB3DE0F /* Pods_Rambl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B79467CE207E8DFA7294EAC /* Pods_Rambl.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +60,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		051637FF1E2C7415005A5156 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		05169F8A1E306F46001C8835 /* RamblImplementor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RamblImplementor.swift; path = Models/RamblImplementor.swift; sourceTree = "<group>"; };
+		05169F911E3074A2001C8835 /* ModelsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsConstants.swift; path = Models/ModelsConstants.swift; sourceTree = "<group>"; };
+		053BFAED1E34240100C54B5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		053BFAF01E343EE000C54B5A /* RamblMKPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RamblMKPointAnnotation.swift; path = UI/Mapping/RamblMKPointAnnotation.swift; sourceTree = "<group>"; };
+		053BFAF41E343FF500C54B5A /* RamblMKPinAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RamblMKPinAnnotationView.swift; path = UI/Mapping/RamblMKPinAnnotationView.swift; sourceTree = "<group>"; };
+		057E2B1F1E33D27100BC518F /* Date+Rambl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Rambl.swift"; path = "logic/extensions/Date+Rambl.swift"; sourceTree = "<group>"; };
 		05B69ACC1E2AC8D100B52C1C /* Rambl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B69ACF1E2AC8D100B52C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		05B69AD11E2AC8D100B52C1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		05B69AD41E2AC8D100B52C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		05B69AD61E2AC8D100B52C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05B69AD91E2AC8D100B52C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05B69ADB1E2AC8D100B52C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05B69AE01E2AC8D200B52C1C /* RamblTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamblTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B69AE41E2AC8D200B52C1C /* RamblTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamblTests.swift; sourceTree = "<group>"; };
@@ -47,6 +76,33 @@
 		05B69AEB1E2AC8D200B52C1C /* RamblUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamblUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B69AEF1E2AC8D200B52C1C /* RamblUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamblUITests.swift; sourceTree = "<group>"; };
 		05B69AF11E2AC8D200B52C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05B69B061E2B089500B52C1C /* AVFoundationAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVFoundationAudioPlayer.swift; sourceTree = "<group>"; };
+		05B69B081E2B089500B52C1C /* AVFoundationAudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVFoundationAudioRecorder.swift; sourceTree = "<group>"; };
+		05B69B0A1E2B089500B52C1C /* CoreLocationLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreLocationLocator.swift; sourceTree = "<group>"; };
+		05B69B0C1E2B089500B52C1C /* FireBasePersistor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBasePersistor.swift; sourceTree = "<group>"; };
+		05B69B0F1E2B089500B52C1C /* AWSS3Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSS3Uploader.swift; sourceTree = "<group>"; };
+		05B69B121E2B089500B52C1C /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		05B69B131E2B089500B52C1C /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		05B69B141E2B089500B52C1C /* Locator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
+		05B69B151E2B089500B52C1C /* Persistor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistor.swift; sourceTree = "<group>"; };
+		05B69B161E2B089500B52C1C /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uploader.swift; sourceTree = "<group>"; };
+		05B69B181E2B089500B52C1C /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		05B69B191E2B089500B52C1C /* Contribution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
+		05B69B1A1E2B089500B52C1C /* Rambl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rambl.swift; sourceTree = "<group>"; };
+		05C366331E2B0B2400B21C12 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = UI/Storyboards/Main.storyboard; sourceTree = "<group>"; };
+		05C366351E2B0B7D00B21C12 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Splash.storyboard; path = UI/Storyboards/Splash.storyboard; sourceTree = "<group>"; };
+		05C366381E2B0BAD00B21C12 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		05C3663A1E2B0BAD00B21C12 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		05C3663D1E2B0D2F00B21C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = UI/Assets.xcassets; sourceTree = "<group>"; };
+		05CD97121E340F480033C0A7 /* Geohash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geohash.swift; sourceTree = "<group>"; };
+		05CD97131E340F480033C0A7 /* GeohashBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeohashBox.swift; sourceTree = "<group>"; };
+		05D532341E347F7F0044B61F /* RamblLogicBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RamblLogicBridge.swift; sourceTree = "<group>"; };
+		5B79467CE207E8DFA7294EAC /* Pods_Rambl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rambl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FE5938E68E3E2DD7974E80 /* Pods-RamblTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamblTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RamblTests/Pods-RamblTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6FC3823F488D4B7C6E6EDC1 /* Pods-Rambl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rambl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rambl/Pods-Rambl.debug.xcconfig"; sourceTree = "<group>"; };
+		B427086D3ED99E3DB4A95C9F /* Pods-Rambl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rambl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rambl/Pods-Rambl.release.xcconfig"; sourceTree = "<group>"; };
+		DB88B9E2C23C93C187B8169F /* Pods_RamblTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RamblTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4E5A3A5321F4B33606198CC /* Pods-RamblTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamblTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RamblTests/Pods-RamblTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				051638001E2C7415005A5156 /* MapKit.framework in Frameworks */,
+				5436B4676E8A6E991EB3DE0F /* Pods_Rambl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E493887AAC3F1906139DFD4 /* Pods_RamblTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +133,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051637FE1E2C7415005A5156 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				051637FF1E2C7415005A5156 /* MapKit.framework */,
+				5B79467CE207E8DFA7294EAC /* Pods_Rambl.framework */,
+				DB88B9E2C23C93C187B8169F /* Pods_RamblTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05169F891E306EC3001C8835 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05169F911E3074A2001C8835 /* ModelsConstants.swift */,
+				05169F8A1E306F46001C8835 /* RamblImplementor.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		053BFAEF1E343E8300C54B5A /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				053BFAF01E343EE000C54B5A /* RamblMKPointAnnotation.swift */,
+				053BFAF41E343FF500C54B5A /* RamblMKPinAnnotationView.swift */,
+			);
+			name = Mapping;
+			sourceTree = "<group>";
+		};
+		057E2B1C1E33D21800BC518F /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				057E2B1F1E33D27100BC518F /* Date+Rambl.swift */,
+			);
+			name = extension;
+			sourceTree = "<group>";
+		};
 		05B69AC31E2AC8D100B52C1C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +176,8 @@
 				05B69AE31E2AC8D200B52C1C /* RamblTests */,
 				05B69AEE1E2AC8D200B52C1C /* RamblUITests */,
 				05B69ACD1E2AC8D100B52C1C /* Products */,
+				051637FE1E2C7415005A5156 /* Frameworks */,
+				0ED0938364AFBEF2663F8C1A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +195,10 @@
 			isa = PBXGroup;
 			children = (
 				05B69ACF1E2AC8D100B52C1C /* AppDelegate.swift */,
-				05B69AD11E2AC8D100B52C1C /* ViewController.swift */,
-				05B69AD31E2AC8D100B52C1C /* Main.storyboard */,
-				05B69AD61E2AC8D100B52C1C /* Assets.xcassets */,
-				05B69AD81E2AC8D100B52C1C /* LaunchScreen.storyboard */,
+				05B69AFD1E2B086900B52C1C /* logic */,
+				05B69B301E2B097C00B52C1C /* UI */,
 				05B69ADB1E2AC8D100B52C1C /* Info.plist */,
+				053BFAED1E34240100C54B5A /* GoogleService-Info.plist */,
 			);
 			path = Rambl;
 			sourceTree = "<group>";
@@ -125,6 +221,172 @@
 			path = RamblUITests;
 			sourceTree = "<group>";
 		};
+		05B69AFD1E2B086900B52C1C /* logic */ = {
+			isa = PBXGroup;
+			children = (
+				05CD97111E340F330033C0A7 /* GeohashKit */,
+				05B69AFE1E2B089500B52C1C /* bridges */,
+				057E2B1C1E33D21800BC518F /* extension */,
+				05B69B041E2B089500B52C1C /* implementations */,
+				05B69B101E2B089500B52C1C /* protocols */,
+			);
+			name = logic;
+			sourceTree = "<group>";
+		};
+		05B69AFE1E2B089500B52C1C /* bridges */ = {
+			isa = PBXGroup;
+			children = (
+				05D532341E347F7F0044B61F /* RamblLogicBridge.swift */,
+			);
+			name = bridges;
+			path = logic/bridges;
+			sourceTree = "<group>";
+		};
+		05B69B041E2B089500B52C1C /* implementations */ = {
+			isa = PBXGroup;
+			children = (
+				05B69B051E2B089500B52C1C /* AudioPlayers */,
+				05B69B071E2B089500B52C1C /* AudioRecorders */,
+				05B69B091E2B089500B52C1C /* Locators */,
+				05169F891E306EC3001C8835 /* Models */,
+				05B69B0B1E2B089500B52C1C /* Persistors */,
+				05B69B0E1E2B089500B52C1C /* Uploaders */,
+			);
+			name = implementations;
+			path = logic/implementations;
+			sourceTree = "<group>";
+		};
+		05B69B051E2B089500B52C1C /* AudioPlayers */ = {
+			isa = PBXGroup;
+			children = (
+				05B69B061E2B089500B52C1C /* AVFoundationAudioPlayer.swift */,
+			);
+			path = AudioPlayers;
+			sourceTree = "<group>";
+		};
+		05B69B071E2B089500B52C1C /* AudioRecorders */ = {
+			isa = PBXGroup;
+			children = (
+				05B69B081E2B089500B52C1C /* AVFoundationAudioRecorder.swift */,
+			);
+			path = AudioRecorders;
+			sourceTree = "<group>";
+		};
+		05B69B091E2B089500B52C1C /* Locators */ = {
+			isa = PBXGroup;
+			children = (
+				05B69B0A1E2B089500B52C1C /* CoreLocationLocator.swift */,
+			);
+			path = Locators;
+			sourceTree = "<group>";
+		};
+		05B69B0B1E2B089500B52C1C /* Persistors */ = {
+			isa = PBXGroup;
+			children = (
+				05B69B0C1E2B089500B52C1C /* FireBasePersistor.swift */,
+			);
+			path = Persistors;
+			sourceTree = "<group>";
+		};
+		05B69B0E1E2B089500B52C1C /* Uploaders */ = {
+			isa = PBXGroup;
+			children = (
+				05B69B0F1E2B089500B52C1C /* AWSS3Uploader.swift */,
+			);
+			path = Uploaders;
+			sourceTree = "<group>";
+		};
+		05B69B101E2B089500B52C1C /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				05B69B111E2B089500B52C1C /* functionality */,
+				05B69B171E2B089500B52C1C /* models */,
+			);
+			name = protocols;
+			path = logic/protocols;
+			sourceTree = "<group>";
+		};
+		05B69B111E2B089500B52C1C /* functionality */ = {
+			isa = PBXGroup;
+			children = (
+				05B69B121E2B089500B52C1C /* AudioPlayer.swift */,
+				05B69B131E2B089500B52C1C /* AudioRecorder.swift */,
+				05B69B141E2B089500B52C1C /* Locator.swift */,
+				05B69B151E2B089500B52C1C /* Persistor.swift */,
+				05B69B161E2B089500B52C1C /* Uploader.swift */,
+			);
+			path = functionality;
+			sourceTree = "<group>";
+		};
+		05B69B171E2B089500B52C1C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				05B69B181E2B089500B52C1C /* Chat.swift */,
+				05B69B191E2B089500B52C1C /* Contribution.swift */,
+				05B69B1A1E2B089500B52C1C /* Rambl.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		05B69B301E2B097C00B52C1C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				053BFAEF1E343E8300C54B5A /* Mapping */,
+				05C366321E2B0ACA00B21C12 /* Storyboards */,
+				05C366371E2B0BAD00B21C12 /* ViewControllers */,
+				05C366391E2B0BAD00B21C12 /* ViewModels */,
+				05C3663D1E2B0D2F00B21C12 /* Assets.xcassets */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		05C366321E2B0ACA00B21C12 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				05C366331E2B0B2400B21C12 /* Main.storyboard */,
+				05C366351E2B0B7D00B21C12 /* Splash.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		05C366371E2B0BAD00B21C12 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				05C366381E2B0BAD00B21C12 /* MainViewController.swift */,
+			);
+			name = ViewControllers;
+			path = UI/ViewControllers;
+			sourceTree = "<group>";
+		};
+		05C366391E2B0BAD00B21C12 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				05C3663A1E2B0BAD00B21C12 /* MainViewModel.swift */,
+			);
+			name = ViewModels;
+			path = UI/ViewModels;
+			sourceTree = "<group>";
+		};
+		05CD97111E340F330033C0A7 /* GeohashKit */ = {
+			isa = PBXGroup;
+			children = (
+				05CD97121E340F480033C0A7 /* Geohash.swift */,
+				05CD97131E340F480033C0A7 /* GeohashBox.swift */,
+			);
+			name = GeohashKit;
+			sourceTree = "<group>";
+		};
+		0ED0938364AFBEF2663F8C1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6FC3823F488D4B7C6E6EDC1 /* Pods-Rambl.debug.xcconfig */,
+				B427086D3ED99E3DB4A95C9F /* Pods-Rambl.release.xcconfig */,
+				E4E5A3A5321F4B33606198CC /* Pods-RamblTests.debug.xcconfig */,
+				85FE5938E68E3E2DD7974E80 /* Pods-RamblTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +394,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05B69AF41E2AC8D200B52C1C /* Build configuration list for PBXNativeTarget "Rambl" */;
 			buildPhases = (
+				E30969A50A00C663280180D7 /* [CP] Check Pods Manifest.lock */,
 				05B69AC81E2AC8D100B52C1C /* Sources */,
 				05B69AC91E2AC8D100B52C1C /* Frameworks */,
 				05B69ACA1E2AC8D100B52C1C /* Resources */,
+				ED1042A89AB34DFB8F6F5D2D /* [CP] Embed Pods Frameworks */,
+				A760A6DF6771C947B1D364BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +414,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05B69AF71E2AC8D200B52C1C /* Build configuration list for PBXNativeTarget "RamblTests" */;
 			buildPhases = (
+				008FEB846378356AE72B9736 /* [CP] Check Pods Manifest.lock */,
 				05B69ADC1E2AC8D200B52C1C /* Sources */,
 				05B69ADD1E2AC8D200B52C1C /* Frameworks */,
 				05B69ADE1E2AC8D200B52C1C /* Resources */,
+				137A02DAC72BB6D7D5A74B44 /* [CP] Embed Pods Frameworks */,
+				E033732B8147BA3A34FD04A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,7 +461,13 @@
 				TargetAttributes = {
 					05B69ACB1E2AC8D100B52C1C = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BYFTRD4RGW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					05B69ADF1E2AC8D200B52C1C = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -232,9 +506,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B69ADA1E2AC8D100B52C1C /* LaunchScreen.storyboard in Resources */,
-				05B69AD71E2AC8D100B52C1C /* Assets.xcassets in Resources */,
-				05B69AD51E2AC8D100B52C1C /* Main.storyboard in Resources */,
+				05C366341E2B0B2400B21C12 /* Main.storyboard in Resources */,
+				053BFAEE1E34240100C54B5A /* GoogleService-Info.plist in Resources */,
+				05C3663E1E2B0D2F00B21C12 /* Assets.xcassets in Resources */,
+				05C366361E2B0B7D00B21C12 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +529,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		008FEB846378356AE72B9736 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		137A02DAC72BB6D7D5A74B44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamblTests/Pods-RamblTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A760A6DF6771C947B1D364BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rambl/Pods-Rambl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E033732B8147BA3A34FD04A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamblTests/Pods-RamblTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E30969A50A00C663280180D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED1042A89AB34DFB8F6F5D2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rambl/Pods-Rambl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05B69AC81E2AC8D100B52C1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B69AD21E2AC8D100B52C1C /* ViewController.swift in Sources */,
+				05B69B2E1E2B089500B52C1C /* Rambl.swift in Sources */,
+				05C3663B1E2B0BAD00B21C12 /* MainViewController.swift in Sources */,
+				05B69B241E2B089500B52C1C /* FireBasePersistor.swift in Sources */,
+				05D532351E347F7F0044B61F /* RamblLogicBridge.swift in Sources */,
+				05B69B2C1E2B089500B52C1C /* Chat.swift in Sources */,
+				05B69B2B1E2B089500B52C1C /* Uploader.swift in Sources */,
+				05B69B231E2B089500B52C1C /* CoreLocationLocator.swift in Sources */,
+				05169F921E3074A2001C8835 /* ModelsConstants.swift in Sources */,
+				057E2B201E33D27100BC518F /* Date+Rambl.swift in Sources */,
 				05B69AD01E2AC8D100B52C1C /* AppDelegate.swift in Sources */,
+				05CD97141E340F480033C0A7 /* Geohash.swift in Sources */,
+				05169F8B1E306F46001C8835 /* RamblImplementor.swift in Sources */,
+				05B69B2D1E2B089500B52C1C /* Contribution.swift in Sources */,
+				05B69B211E2B089500B52C1C /* AVFoundationAudioPlayer.swift in Sources */,
+				05B69B221E2B089500B52C1C /* AVFoundationAudioRecorder.swift in Sources */,
+				05CD97151E340F480033C0A7 /* GeohashBox.swift in Sources */,
+				05B69B281E2B089500B52C1C /* AudioRecorder.swift in Sources */,
+				05B69B261E2B089500B52C1C /* AWSS3Uploader.swift in Sources */,
+				05B69B2A1E2B089500B52C1C /* Persistor.swift in Sources */,
+				05B69B291E2B089500B52C1C /* Locator.swift in Sources */,
+				053BFAF51E343FF500C54B5A /* RamblMKPinAnnotationView.swift in Sources */,
+				05C3663C1E2B0BAD00B21C12 /* MainViewModel.swift in Sources */,
+				05B69B271E2B089500B52C1C /* AudioPlayer.swift in Sources */,
+				053BFAF11E343EE000C54B5A /* RamblMKPointAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,25 +684,6 @@
 			targetProxy = 05B69AEC1E2AC8D200B52C1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		05B69AD31E2AC8D100B52C1C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05B69AD41E2AC8D100B52C1C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		05B69AD81E2AC8D100B52C1C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05B69AD91E2AC8D100B52C1C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		05B69AF21E2AC8D200B52C1C /* Debug */ = {
@@ -410,23 +781,33 @@
 		};
 		05B69AF51E2AC8D200B52C1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6FC3823F488D4B7C6E6EDC1 /* Pods-Rambl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BYFTRD4RGW;
 				INFOPLIST_FILE = Rambl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rcr.Rambl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcrmobileprojects.Rambl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		05B69AF61E2AC8D200B52C1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B427086D3ED99E3DB4A95C9F /* Pods-Rambl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BYFTRD4RGW;
 				INFOPLIST_FILE = Rambl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rcr.Rambl;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rcrmobileprojects.Rambl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -434,6 +815,7 @@
 		};
 		05B69AF81E2AC8D200B52C1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4E5A3A5321F4B33606198CC /* Pods-RamblTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -448,6 +830,7 @@
 		};
 		05B69AF91E2AC8D200B52C1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85FE5938E68E3E2DD7974E80 /* Pods-RamblTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +888,7 @@
 				05B69AF61E2AC8D200B52C1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05B69AF71E2AC8D200B52C1C /* Build configuration list for PBXNativeTarget "RamblTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +897,7 @@
 				05B69AF91E2AC8D200B52C1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05B69AFA1E2AC8D200B52C1C /* Build configuration list for PBXNativeTarget "RamblUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +906,7 @@
 				05B69AFC1E2AC8D200B52C1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
