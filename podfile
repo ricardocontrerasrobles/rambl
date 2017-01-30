@@ -9,6 +9,7 @@ target 'Rambl' do
   pod  'Firebase/Database'
   pod 'AWSCognito'
   pod 'AWSS3'
+  pod 'SDWebImage'
 
   target 'RamblTests' do
     inherit! :search_paths

@@ -8,35 +8,11 @@
 
 import Foundation
 
-public enum ContributionMediaType : String
-{
-    case Audio = "audio"
-    case Video = "video"
-    case Image = "image"
-}
-
-extension ContributionMediaType
-{
-    func getExtension() -> String
-    {
-        switch self
-        {
-        case .Audio:
-            return ".m4a"
-        case .Video:
-            return ".mov"
-        case .Image:
-            return ".png"
-        }
-    }
-}
-
-public protocol Contribution
+public protocol Contribution: Uploadable
 {
     var id:String { get }
-    var path:String { get }
-    var user:String {get}
-    var date:Date {get}
-    var mediaType:ContributionMediaType {get}
-    var localURL:URL? {get}
+    var user:String { get }
+    var date:Date { get }
+    
+    func toDict() -> [String:String]?
 }

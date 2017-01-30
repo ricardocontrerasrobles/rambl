@@ -10,6 +10,10 @@ import Foundation
 
 class RamblLogicBridge
 {
+    static func getContributionCreator() -> ContributionCreator
+    {
+        return ContributionCreatorImplementor()
+    }
     static func getAudioPlayer() -> AudioPlayer
     {
         return AVFoundationAudioPlayer()

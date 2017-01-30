@@ -10,15 +10,15 @@ import Foundation
 
 internal struct RamblImplementor : Rambl
 {
-    var user:String
-    var date:Date
-    var mediaType:ContributionMediaType
-    var localURL:URL?
-    var latitude:Double
-    var longitude:Double
-    var locationName:String
-    var status:String
-    var id:String {
+    var user: String
+    var date: Date
+    var mediaType: UploadMediaType
+    var localURL: URL?
+    var latitude: Double
+    var longitude: Double
+    var locationName: String
+    var status: String
+    var id: String {
         get
         {
             return user + "_" + date.idDateString()
@@ -54,7 +54,7 @@ internal struct RamblImplementor : Rambl
     {
         guard check(ramblDict: ramblDict),
             let date = Date.from(backendDateString: ramblDict[ModelsConstants.dateKey]!),
-            let mediaType = ContributionMediaType(rawValue: ramblDict[ModelsConstants.mediaTypeKey]!),
+            let mediaType = UploadMediaType(rawValue: ramblDict[ModelsConstants.mediaTypeKey]!),
             let latitude = Double(ramblDict[ModelsConstants.latitudeKey]!),
             let longitude = Double(ramblDict[ModelsConstants.longitudeKey]!) else
         {
@@ -71,8 +71,6 @@ internal struct RamblImplementor : Rambl
             locationName: ramblDict[ModelsConstants.locationNameKey]!,
             status: ramblDict[ModelsConstants.statusKey]!)
         
-        // TODO: Instead of using webURL we can use the unique ID
-        // Maybe comply with the func to compare
         return rambl
     }
 }

@@ -19,6 +19,6 @@ public enum AudioPlayerStatus
 
 public protocol AudioPlayer
 {
-    var statusBinding: AudioPlayerStatusBinding? {get set}
+    var audioPlayerStatus: AudioPlayerStatusBinding? {get set}
     func play(url: URL)
 }

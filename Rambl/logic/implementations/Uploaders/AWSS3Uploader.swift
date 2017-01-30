@@ -11,16 +11,17 @@ import AWSS3
 
 internal class AWSS3Uploader : Uploader
 {
-    static let bucket = "rambls"
     static let url = "https://s3.amazonaws.com"
+    static let bucket = "rambls"
+    private static let imagesPath = "images"
     
-    func upload(contribution: Contribution, completion: @escaping UploaderCompletion)
+    func upload(uploadable: Uploadable, completion: @escaping UploaderCompletion)
     {
         let uploadRequest = AWSS3TransferManagerUploadRequest()
-        uploadRequest?.body = contribution.localURL
-        uploadRequest?.key = contribution.path
+        uploadRequest?.body = uploadable.localURL
+        uploadRequest?.key = uploadable.path
         uploadRequest?.bucket = AWSS3Uploader.bucket
-        uploadRequest?.contentType = contribution.mediaType.rawValue + "/" + contribution.mediaType.getExtension()
+        uploadRequest?.contentType = uploadable.mediaType.rawValue + "/" + uploadable.mediaType.getExtension()
         uploadRequest?.acl = AWSS3ObjectCannedACL.publicRead
         
         let transferManager = AWSS3TransferManager.default()
@@ -28,32 +29,50 @@ internal class AWSS3Uploader : Uploader
             
             guard task.error == nil else
             {
-                completion(contribution, nil, task.error)
+                completion(uploadable, nil, task.error)
                 return uploadRequest
             }
             
             guard task.exception == nil, task.result != nil,
-                let url = self?.url(contribution: contribution) else
+                let url = self?.uploadableURL(uploadable: uploadable) else
             {
-                completion(contribution, nil, nil)
+                completion(uploadable, nil, nil)
                 return uploadRequest
             }
             
-            completion(contribution, url, nil)
+            completion(uploadable, url, nil)
+            self?.deleteLocalFile(url: uploadable.localURL)
             return uploadRequest
         }
     }
     
-    func getURL() -> String
+    func uploadableURL(uploadable: Uploadable) -> String
     {
-        return AWSS3Uploader.url + "/" + AWSS3Uploader.bucket
+        return AWSS3Uploader.url + "/" + AWSS3Uploader.bucket + "/" + uploadable.path
+    }
+    
+    func userImageURL(user: String) -> String
+    {
+        return AWSS3Uploader.url + "/" + AWSS3Uploader.bucket + "/" + AWSS3Uploader.imagesPath + "/" + user + UploadMediaType.Image.getExtension()
     }
 }
 
 private extension AWSS3Uploader
 {
-    func url(contribution: Contribution) -> URL?
+    func deleteLocalFile(url: URL?)
     {
-        return URL(string: getURL() + "/" + contribution.path)
+        guard let url = url else
+        {
+            return
+        }
+        
+        do
+        {
+            try FileManager.default.removeItem(atPath: url.absoluteString)
+        }
+        catch let error as NSError
+        {
+            print(error)
+        }
     }
 }

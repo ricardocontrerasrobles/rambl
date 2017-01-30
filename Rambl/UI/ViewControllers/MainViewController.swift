@@ -8,18 +8,20 @@
 
 import UIKit
 import MapKit
+import SDWebImage
 
 class MainViewController: UIViewController
 {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var playingView: UIView!
     @IBOutlet weak var playingLabel: UILabel!
+    @IBOutlet weak var userImageView: UIImageView!
     let viewModel = MainViewModel()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.setup()
+        setup()
     }
 
     override func didReceiveMemoryWarning()
@@ -34,15 +36,35 @@ class MainViewController: UIViewController
     {
         viewModel.stopRecording()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "goToChat",
+            let chatViewController = segue.destination as? ChatViewController,
+            let chatViewModel = viewModel.getChatViewModel()
+        {
+            chatViewController.viewModel = chatViewModel
+        }
+        
+        if segue.identifier == "goToSettings",
+            let settingsViewController = segue.destination as? SettingsViewController,
+            let settingsViewModel = viewModel.getSettingsViewModel()
+        {
+            settingsViewController.viewModel = settingsViewModel
+        }  
+    }
 }
 
 private extension MainViewController
 {
     func setup()
     {
+        userImageView.layer.cornerRadius = userImageView.frame.size.width / 2
+        userImageView.clipsToBounds = true
+        
         playingView.isHidden = true
 //        self.map.isUserInteractionEnabled = false
-        self.map.delegate = self
+        map.delegate = self
         viewModel.updateMap = { [weak self] (region, rambls) in
             self?.map.region = region
             if let rambls = rambls
@@ -51,7 +73,7 @@ private extension MainViewController
             }
         }
         
-        viewModel.statusBinding = { [weak self] (status) in
+        viewModel.audioPlayerStatus = { [weak self] (status) in
             switch status
             {
             case .Playing:
@@ -83,6 +105,11 @@ private extension MainViewController
             playingView.isHidden = false
         }
         playingLabel.text = rambl.locationName + ": " + rambl.status
+        
+        if let userImageURL = URL(string:viewModel.userImageURL(rambl: rambl))
+        {
+            userImageView.sd_setImage(with: userImageURL)
+        }
     }
 }
 
@@ -125,7 +152,7 @@ extension MainViewController : MKMapViewDelegate
         }
         if let rambl = ramblMapView.rambl
         {
-            viewModel.play(contribution: rambl)
+            viewModel.play(rambl: rambl)
             playing(rambl: rambl)
         }
     }

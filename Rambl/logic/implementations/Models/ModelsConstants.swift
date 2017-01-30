@@ -10,14 +10,23 @@ import Foundation
 
 internal struct ModelsConstants
 {
+    // Util constants
+    static let dateFormatterString = "yyyy-mm-dd-hh-mm-ss"
+    
+    // Common constants
     static let idKey = "id"
-    static let statusKey = "status"
     static let userKey = "user"
     static let dateKey = "date"
     static let mediaTypeKey = "mediatype"
+    
+    // Rambl constants
     static let latitudeKey = "latitude"
     static let longitudeKey = "longitude"
     static let geohashKey = "geohash"
     static let locationNameKey = "locationname"
-    static let dateFormatterString = "yyyy-mm-dd-hh-mm-ss"
+    static let statusKey = "status"
+    
+    // Chat constants
+    static let ramblKey = "rambl"
+    static let ramblAuthorKey = "ramblAuthor"
 }

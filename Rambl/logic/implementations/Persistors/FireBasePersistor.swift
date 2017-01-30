@@ -11,12 +11,13 @@ import Firebase
 
 internal class FireBasePersistor : Persistor
 {
-    private lazy var reference: FIRDatabaseReference = 
+    internal lazy var reference: FIRDatabaseReference =
     {
         return FIRDatabase.database().reference()
     }()
-    static private let user = UIDevice.current.identifierForVendor?.uuidString
+
     private static let ramblsKey = "rambls"
+    private static let chatsKey = "chats"
     private static let geohashKey = "geohash"
     
     func setup()
@@ -44,7 +45,6 @@ internal class FireBasePersistor : Persistor
             }
             
             var allRambls = [Rambl]()
-            
             let rambls = snapshot.value as! [String:[String:String]]
             for key in rambls.keys {
                 if let ramblDict = rambls[key], let rambl = RamblImplementor.fromDict(ramblDict: ramblDict)
@@ -62,34 +62,54 @@ internal class FireBasePersistor : Persistor
         // TODO: Get Rambls
     }
     
-    func getChats(rambl: Rambl, completion: PersistorChatCompletion)
+    func getChats(rambl: Rambl, completion: @escaping PersistorChatCompletion)
     {
-        // TODO: Get chats
+        // TODO: Get only the chats by the current user not all
+        let chatsQuery = (reference.child(FireBasePersistor.chatsKey).queryOrdered(byChild: "rambl").queryEqual(toValue:rambl.id))
+        chatsQuery.observe(.value, with: { (snapshot) -> Void in
+            if !snapshot.hasChildren() {
+                completion(nil, nil)
+                return
+            }
+            
+            var allChats = [Chat]()
+            let chats = snapshot.value as! [String:[String:String]]
+            for key in chats.keys {
+                if let chatDict = chats[key], let chat = ChatImplementor.fromDict(chatDict: chatDict)
+                {
+                    allChats.append(chat)
+                }
+            }
+            completion(allChats, nil)
+        })
     }
     
-    func saveRambl(localURL:URL, uploader: Uploader, type: ContributionMediaType, latitude:Double, longitude:Double, locationName:String, status: String, completion: PersistorSimpleCompletion)
+    func getChats(user: String, completion: PersistorChatCompletion)
     {
-        guard let user = FireBasePersistor.user else
-        {
-            completion(nil)
-            return
-        }
         
-        // TODO: Should we have a status?
-        let rambl = RamblImplementor(user: user,
-                                     date: Date(),
-                                     mediaType: type,
-                                     localURL: localURL,
-                                     latitude: latitude,
-                                     longitude: longitude,
-                                     locationName: locationName,
-                                     status: status)
-        uploader.upload(contribution: rambl) { [weak self] (contribution, webURL, error) in
-            guard error == nil else
+    }
+    
+    func save(rambl: Rambl, uploader: Uploader)
+    {
+        save(contribution: rambl, uploader: uploader, key: FireBasePersistor.ramblsKey)
+    }
+    
+    func save(chat: Chat, uploader: Uploader)
+    {
+        save(contribution: chat, uploader: uploader, key: FireBasePersistor.chatsKey)
+    }
+}
+
+private extension FireBasePersistor
+{
+    func save(contribution: Contribution, uploader: Uploader, key: String)
+    {
+        uploader.upload(uploadable: contribution) { [weak self] (uploadable, webURL, error) in
+            guard webURL != nil else
             {
                 return
             }
-            self?.reference.child(FireBasePersistor.ramblsKey).child(rambl.id).setValue(rambl.toDict())
+            self?.reference.child(key).child(contribution.id).setValue(contribution.toDict())
         }
     }
 }

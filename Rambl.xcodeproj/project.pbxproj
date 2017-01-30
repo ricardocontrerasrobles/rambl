@@ -13,6 +13,15 @@
 		053BFAEE1E34240100C54B5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 053BFAED1E34240100C54B5A /* GoogleService-Info.plist */; };
 		053BFAF11E343EE000C54B5A /* RamblMKPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053BFAF01E343EE000C54B5A /* RamblMKPointAnnotation.swift */; };
 		053BFAF51E343FF500C54B5A /* RamblMKPinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053BFAF41E343FF500C54B5A /* RamblMKPinAnnotationView.swift */; };
+		056A906E1E3D2FAD00D3F191 /* ChatImplementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A906D1E3D2FAD00D3F191 /* ChatImplementor.swift */; };
+		056A90721E3D3B5800D3F191 /* ContributionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A90711E3D3B5800D3F191 /* ContributionCreator.swift */; };
+		056A90741E3D433C00D3F191 /* ContributionCreatorImplementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A90731E3D433C00D3F191 /* ContributionCreatorImplementor.swift */; };
+		056A90761E3D910E00D3F191 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A90751E3D910E00D3F191 /* ChatViewController.swift */; };
+		056A90781E3D912C00D3F191 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A90771E3D912C00D3F191 /* ChatViewModel.swift */; };
+		056A907A1E3DC0F200D3F191 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A90791E3DC0F200D3F191 /* SettingsViewController.swift */; };
+		056A907C1E3DC11600D3F191 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A907B1E3DC11600D3F191 /* SettingsViewModel.swift */; };
+		056A907E1E3DCF2200D3F191 /* Uploadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A907D1E3DCF2200D3F191 /* Uploadable.swift */; };
+		056A90801E3DD7A500D3F191 /* UploadableImplementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A907F1E3DD7A500D3F191 /* UploadableImplementor.swift */; };
 		057E2B201E33D27100BC518F /* Date+Rambl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057E2B1F1E33D27100BC518F /* Date+Rambl.swift */; };
 		05B69AD01E2AC8D100B52C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69ACF1E2AC8D100B52C1C /* AppDelegate.swift */; };
 		05B69AE51E2AC8D200B52C1C /* RamblTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69AE41E2AC8D200B52C1C /* RamblTests.swift */; };
@@ -66,6 +75,15 @@
 		053BFAED1E34240100C54B5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		053BFAF01E343EE000C54B5A /* RamblMKPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RamblMKPointAnnotation.swift; path = UI/Mapping/RamblMKPointAnnotation.swift; sourceTree = "<group>"; };
 		053BFAF41E343FF500C54B5A /* RamblMKPinAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RamblMKPinAnnotationView.swift; path = UI/Mapping/RamblMKPinAnnotationView.swift; sourceTree = "<group>"; };
+		056A906D1E3D2FAD00D3F191 /* ChatImplementor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatImplementor.swift; path = Models/ChatImplementor.swift; sourceTree = "<group>"; };
+		056A90711E3D3B5800D3F191 /* ContributionCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCreator.swift; sourceTree = "<group>"; };
+		056A90731E3D433C00D3F191 /* ContributionCreatorImplementor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContributionCreatorImplementor.swift; path = Models/ContributionCreatorImplementor.swift; sourceTree = "<group>"; };
+		056A90751E3D910E00D3F191 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		056A90771E3D912C00D3F191 /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		056A90791E3DC0F200D3F191 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		056A907B1E3DC11600D3F191 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		056A907D1E3DCF2200D3F191 /* Uploadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uploadable.swift; sourceTree = "<group>"; };
+		056A907F1E3DD7A500D3F191 /* UploadableImplementor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadableImplementor.swift; path = Models/UploadableImplementor.swift; sourceTree = "<group>"; };
 		057E2B1F1E33D27100BC518F /* Date+Rambl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Rambl.swift"; path = "logic/extensions/Date+Rambl.swift"; sourceTree = "<group>"; };
 		05B69ACC1E2AC8D100B52C1C /* Rambl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B69ACF1E2AC8D100B52C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,8 +164,11 @@
 		05169F891E306EC3001C8835 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				056A906D1E3D2FAD00D3F191 /* ChatImplementor.swift */,
+				056A90731E3D433C00D3F191 /* ContributionCreatorImplementor.swift */,
 				05169F911E3074A2001C8835 /* ModelsConstants.swift */,
 				05169F8A1E306F46001C8835 /* RamblImplementor.swift */,
+				056A907F1E3DD7A500D3F191 /* UploadableImplementor.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -323,7 +344,9 @@
 			children = (
 				05B69B181E2B089500B52C1C /* Chat.swift */,
 				05B69B191E2B089500B52C1C /* Contribution.swift */,
+				056A90711E3D3B5800D3F191 /* ContributionCreator.swift */,
 				05B69B1A1E2B089500B52C1C /* Rambl.swift */,
+				056A907D1E3DCF2200D3F191 /* Uploadable.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -352,7 +375,9 @@
 		05C366371E2B0BAD00B21C12 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				056A90751E3D910E00D3F191 /* ChatViewController.swift */,
 				05C366381E2B0BAD00B21C12 /* MainViewController.swift */,
+				056A90791E3DC0F200D3F191 /* SettingsViewController.swift */,
 			);
 			name = ViewControllers;
 			path = UI/ViewControllers;
@@ -361,7 +386,9 @@
 		05C366391E2B0BAD00B21C12 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				056A90771E3D912C00D3F191 /* ChatViewModel.swift */,
 				05C3663A1E2B0BAD00B21C12 /* MainViewModel.swift */,
+				056A907B1E3DC11600D3F191 /* SettingsViewModel.swift */,
 			);
 			name = ViewModels;
 			path = UI/ViewModels;
@@ -631,24 +658,33 @@
 				05C3663B1E2B0BAD00B21C12 /* MainViewController.swift in Sources */,
 				05B69B241E2B089500B52C1C /* FireBasePersistor.swift in Sources */,
 				05D532351E347F7F0044B61F /* RamblLogicBridge.swift in Sources */,
+				056A907E1E3DCF2200D3F191 /* Uploadable.swift in Sources */,
 				05B69B2C1E2B089500B52C1C /* Chat.swift in Sources */,
 				05B69B2B1E2B089500B52C1C /* Uploader.swift in Sources */,
+				056A90801E3DD7A500D3F191 /* UploadableImplementor.swift in Sources */,
 				05B69B231E2B089500B52C1C /* CoreLocationLocator.swift in Sources */,
 				05169F921E3074A2001C8835 /* ModelsConstants.swift in Sources */,
 				057E2B201E33D27100BC518F /* Date+Rambl.swift in Sources */,
+				056A90781E3D912C00D3F191 /* ChatViewModel.swift in Sources */,
 				05B69AD01E2AC8D100B52C1C /* AppDelegate.swift in Sources */,
+				056A90761E3D910E00D3F191 /* ChatViewController.swift in Sources */,
 				05CD97141E340F480033C0A7 /* Geohash.swift in Sources */,
 				05169F8B1E306F46001C8835 /* RamblImplementor.swift in Sources */,
 				05B69B2D1E2B089500B52C1C /* Contribution.swift in Sources */,
 				05B69B211E2B089500B52C1C /* AVFoundationAudioPlayer.swift in Sources */,
+				056A90721E3D3B5800D3F191 /* ContributionCreator.swift in Sources */,
+				056A906E1E3D2FAD00D3F191 /* ChatImplementor.swift in Sources */,
+				056A907C1E3DC11600D3F191 /* SettingsViewModel.swift in Sources */,
 				05B69B221E2B089500B52C1C /* AVFoundationAudioRecorder.swift in Sources */,
 				05CD97151E340F480033C0A7 /* GeohashBox.swift in Sources */,
 				05B69B281E2B089500B52C1C /* AudioRecorder.swift in Sources */,
 				05B69B261E2B089500B52C1C /* AWSS3Uploader.swift in Sources */,
 				05B69B2A1E2B089500B52C1C /* Persistor.swift in Sources */,
+				056A907A1E3DC0F200D3F191 /* SettingsViewController.swift in Sources */,
 				05B69B291E2B089500B52C1C /* Locator.swift in Sources */,
 				053BFAF51E343FF500C54B5A /* RamblMKPinAnnotationView.swift in Sources */,
 				05C3663C1E2B0BAD00B21C12 /* MainViewModel.swift in Sources */,
+				056A90741E3D433C00D3F191 /* ContributionCreatorImplementor.swift in Sources */,
 				05B69B271E2B089500B52C1C /* AudioPlayer.swift in Sources */,
 				053BFAF11E343EE000C54B5A /* RamblMKPointAnnotation.swift in Sources */,
 			);

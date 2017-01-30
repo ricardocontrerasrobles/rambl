@@ -14,16 +14,17 @@ typealias UpdateMapBinding = (MKCoordinateRegion, [Rambl]?) -> Void
 class MainViewModel
 {
     public var updateMap: UpdateMapBinding?
-    public var statusBinding: AudioPlayerStatusBinding?
-    let locator = RamblLogicBridge.getLocator()
-    let audioRecorder = RamblLogicBridge.getAudioRecorder()
-    var audioPlayer = RamblLogicBridge.getAudioPlayer()
-    let persistor = RamblLogicBridge.getPersistor()
-    let uploader = RamblLogicBridge.getUploader()
-    var latitude : Double  = 0.0
-    var longitude : Double  = 0.0
-    
-    internal let spanDelta : CLLocationDegrees = 0.001
+    public var audioPlayerStatus: AudioPlayerStatusBinding?
+    private let audioRecorder = RamblLogicBridge.getAudioRecorder()
+    private var audioPlayer = RamblLogicBridge.getAudioPlayer()
+    private let persistor = RamblLogicBridge.getPersistor()
+    private let uploader = RamblLogicBridge.getUploader()
+    private let contributionCreator = RamblLogicBridge.getContributionCreator()
+    private let locator = RamblLogicBridge.getLocator()
+    private var latitude : Double  = 0.0
+    private var longitude : Double  = 0.0
+    private static let spanDelta : CLLocationDegrees = 0.001
+    private var currentRambl: Rambl?
     
     init()
     {
@@ -37,68 +38,109 @@ class MainViewModel
     
     func stopRecording()
     {
-        audioRecorder.stop { [weak self] (url) in
-            guard let url = url else
+        audioRecorder.stop { [weak self] (localURL) in
+            guard let localURL = localURL else
             {
                 return
             }
-            self?.save(localURL: url, type: .Audio)
+            self?.save(localURL: localURL, type: .Audio)
         }
     }
     
-    func play(contribution: Contribution)
+    func play(rambl: Rambl)
     {
-        if let url = URL(string: uploader.getURL() + "/" + contribution.path)
+        if let url = URL(string: uploader.uploadableURL(uploadable: rambl))
         {
-            audioPlayer.statusBinding = statusBinding
+            currentRambl = rambl
+            audioPlayer.audioPlayerStatus = audioPlayerStatus
             audioPlayer.play(url: url)
         }
     }
-}
-
-private extension MainViewModel
-{
-    func setup()
+    
+    func getChatViewModel() -> ChatViewModel?
     {
-        locator.getLocation{ [weak self] (latitude, longitude, error) in
-            if self?.longitude != longitude && self?.longitude != longitude
+        guard let currentRambl = currentRambl else
+        {
+            return nil
+        }
+        let chatViewModel = ChatViewModel(rambl: currentRambl,
+                                          audioRecorder: audioRecorder,
+                                          audioPlayer: audioPlayer,
+                                          persistor: persistor,
+                                          uploader: uploader,
+                                          contributionCreator: contributionCreator)
+        return chatViewModel
+    }
+    
+    func getSettingsViewModel() -> SettingsViewModel?
+    {
+        let settingsViewModel = SettingsViewModel(uploader: uploader, contributionCreator: contributionCreator)
+        return settingsViewModel
+    }
+    
+    func userImageURL(rambl: Rambl) -> String
+    {
+        return uploader.userImageURL(user: rambl.user)
+    }
+    
+    private func setup()
+    {
+        locator.getLocation{ [weak self] (newLatitude, newLongitude, error) in
+            if let error = error
             {
-                self?.latitude = latitude
-                self?.longitude = longitude
-                if let region = self?.getRegion(latitude: latitude, longitude: longitude)
-                {
-                    self?.persistor.getRambls(latitude: latitude, longitude: longitude, completion: { [weak self] (rambls, error) in
-                        self?.updateMap?(region, rambls)
-                    })
-                }
+                print(error)
+            }
+            else
+            {
+                self?.locationChanged(newLatitude: newLatitude, newLongitude: newLongitude)
             }
         }
     }
     
-    func save(localURL: URL, type: ContributionMediaType)
+    private func locationChanged(newLatitude: Double, newLongitude: Double)
     {
-        // TODO: Get location name from reverse geocoding
-        persistor.saveRambl(localURL: localURL,
-                            uploader: uploader,
-                            type: .Audio,
-                            latitude: latitude,
-                            longitude: longitude,
-                            locationName: locator.getLocationName(),
-                            status: "I'm rambling") { (error) in
-                                if let error = error
-                                {
-                                    print(error)
-                                }
+        guard latitude != newLatitude || longitude != newLongitude  else
+        {
+            return
+        }
+        latitude = newLatitude
+        longitude = newLongitude
+        self.regionChanged(region: getRegion(latitude: latitude, longitude: longitude))
+    }
+    
+    private func regionChanged(region: MKCoordinateRegion)
+    {
+        self.persistor.getRambls(latitude: latitude, longitude: longitude, completion: { [weak self] (rambls, error) in
+            self?.updateMap?(region, rambls)
+        })
+    }
+    
+    private func save(localURL: URL, type: UploadMediaType)
+    {
+        guard let user = contributionCreator.user else
+        {
+            return
+        }
+        if let rambl = contributionCreator.createRambl(user: user,
+                                                       date: Date(),
+                                                       localURL: localURL,
+                                                       type: .Audio,
+                                                       latitude: latitude,
+                                                       longitude: longitude,
+                                                       locationName: locator.getLocationName(),
+                                                       status: SettingsViewModel.getStatus())
+        {
+            persistor.save(rambl: rambl, uploader: uploader)
         }
     }
     
-    func getRegion(latitude : Double, longitude : Double) -> MKCoordinateRegion
+    private func getRegion(latitude : Double, longitude : Double) -> MKCoordinateRegion
     {
         var region = MKCoordinateRegion()
         region.center.latitude = latitude
         region.center.longitude = longitude
-        region.span.latitudeDelta = spanDelta
-        region.span.longitudeDelta = spanDelta
+        region.span.latitudeDelta = MainViewModel.spanDelta
+        region.span.longitudeDelta = MainViewModel.spanDelta
         return region
     }
 }

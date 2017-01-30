@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
-public typealias UploaderCompletion = (Contribution, URL?, Error?) -> Void
+public typealias UploaderCompletion = (Uploadable, String?, Error?) -> Void
 
 internal protocol Uploader
 {
-    func upload(contribution: Contribution, completion: @escaping UploaderCompletion)
-    func getURL() -> String
+    func upload(uploadable: Uploadable, completion: @escaping UploaderCompletion)
+    func uploadableURL(uploadable: Uploadable) -> String
+    func userImageURL(user: String) -> String
 }

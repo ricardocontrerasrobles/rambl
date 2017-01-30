@@ -10,6 +10,6 @@ import Foundation
 
 public protocol Chat : Contribution
 {
-    var partner:String {get}
+    var ramblAuthor:String {get}
     var rambl:String {get}
 }

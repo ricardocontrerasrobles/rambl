@@ -28,11 +28,15 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.0)
   - GoogleToolboxForMac/NSData+zlib (2.1.0):
     - GoogleToolboxForMac/Defines (= 2.1.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
   - AWSCognito
   - AWSS3
   - Firebase/Database
+  - SDWebImage
 
 SPEC CHECKSUMS:
   AWSCognito: b667cbb826ff191502a882196d01882b002dc1b5
@@ -46,7 +50,8 @@ SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 762799fb66652f61393c697587baa0337a4067fd
+PODFILE CHECKSUM: 770df28a3b99a3fdcab323d17a55a2709256c578
 
 COCOAPODS: 1.1.1

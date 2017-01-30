@@ -11,13 +11,14 @@ import AVFoundation
 
 internal class AVFoundationAudioPlayer : AudioPlayer
 {
-    public var statusBinding: AudioPlayerStatusBinding?
+    public var audioPlayerStatus: AudioPlayerStatusBinding?
     private var player : AVPlayer?
     
     func play(url: URL)
     {
-        statusBinding?(.Loading)
+        audioPlayerStatus = nil
         player = nil
+        audioPlayerStatus?(.Loading)
         let playerItem = AVPlayerItem(url:url)
         player = AVPlayer(playerItem:playerItem)
         player?.volume = 1.0
@@ -28,15 +29,16 @@ internal class AVFoundationAudioPlayer : AudioPlayer
             print("Playing: \(time.seconds)")
             if time.seconds == 0
             {
-                self?.statusBinding?(.Loading)
+                self?.audioPlayerStatus?(.Loading)
             }
             else if time.seconds >= playerItem.duration.seconds
             {
-                self?.statusBinding?(.Finished)
+                self?.audioPlayerStatus?(.Finished)
+                self?.player = nil
             }
             else
             {
-                self?.statusBinding?(.Playing)
+                self?.audioPlayerStatus?(.Playing)
             }
         }
     }

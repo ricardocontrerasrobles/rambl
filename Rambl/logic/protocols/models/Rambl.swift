@@ -15,7 +15,4 @@ public protocol Rambl : Contribution
     var geohash:String {get}
     var locationName:String {get}
     var status:String {get}
-    
-    func toDict() -> [String:String]?
-    static func fromDict(ramblDict : [String : String]) -> Rambl?
 }

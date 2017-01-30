@@ -10,20 +10,14 @@ import Foundation
 
 public typealias PersistorRamblCompletion = ([Rambl]?, Error?) -> Void
 public typealias PersistorChatCompletion = ([Chat]?, Error?) -> Void
-public typealias PersistorSimpleCompletion = (Error?) -> Void
 
 internal protocol Persistor
 {
     func setup()
     func getRambls(latitude: Double, longitude: Double, completion: @escaping PersistorRamblCompletion)
     func getRambls(user: String, completion: PersistorRamblCompletion)
-    func getChats(rambl: Rambl, completion: PersistorChatCompletion)
-    func saveRambl(localURL: URL,
-                   uploader: Uploader,
-                   type: ContributionMediaType,
-                   latitude: Double,
-                   longitude: Double,
-                   locationName: String,
-                   status: String,
-                   completion: PersistorSimpleCompletion)
+    func getChats(rambl: Rambl, completion: @escaping PersistorChatCompletion)
+    func getChats(user: String, completion: PersistorChatCompletion)
+    func save(rambl: Rambl, uploader: Uploader)
+    func save(chat: Chat, uploader: Uploader)
 }

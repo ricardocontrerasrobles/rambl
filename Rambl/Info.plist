@@ -30,6 +30,8 @@
 	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Microphone is used to caputre speech.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Rambl would like to access your pictures</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Splash</string>
 	<key>UIMainStoryboardFile</key>
