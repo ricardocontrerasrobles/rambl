@@ -1,0 +1,9 @@
+//
+//  Config.xcconfig
+//  Rambl
+//
+//  Created by Ricardo Contreras on 3/23/17.
+//  Copyright © 2017 rcr. All rights reserved.
+//
+
+TARGETBUNDLEID = com.test.yes

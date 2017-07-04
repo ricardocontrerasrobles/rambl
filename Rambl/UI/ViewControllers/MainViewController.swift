@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import SDWebImage
 
-class MainViewController: UIViewController
+class MainViewController: BaseViewController
 {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var playingView: UIView!
@@ -28,6 +28,12 @@ class MainViewController: UIViewController
     {
         super.didReceiveMemoryWarning()
     }
+    
+    override func getBaseViewModel() -> BaseViewModel?
+    {
+        return viewModel
+    }
+    
     @IBAction func startRecording(_ sender: Any)
     {
         viewModel.startRecording()
@@ -39,19 +45,7 @@ class MainViewController: UIViewController
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "goToChat",
-            let chatViewController = segue.destination as? ChatViewController,
-            let chatViewModel = viewModel.getChatViewModel()
-        {
-            chatViewController.viewModel = chatViewModel
-        }
-        
-        if segue.identifier == "goToSettings",
-            let settingsViewController = segue.destination as? SettingsViewController,
-            let settingsViewModel = viewModel.getSettingsViewModel()
-        {
-            settingsViewController.viewModel = settingsViewModel
-        }  
+        Router().prepare(for: segue)
     }
 }
 

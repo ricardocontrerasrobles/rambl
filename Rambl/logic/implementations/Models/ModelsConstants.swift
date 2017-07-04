@@ -27,6 +27,5 @@ internal struct ModelsConstants
     static let statusKey = "status"
     
     // Chat constants
-    static let ramblKey = "rambl"
-    static let ramblAuthorKey = "ramblAuthor"
+    static let toKey = "to"
 }

@@ -55,6 +55,8 @@ internal class FireBasePersistor : Persistor
             completion(allRambls, nil)
         })
         
+        // TODO: Callbacks are removed by calling the off() method on your Firebase database reference.
+        
     }
     
     func getRambls(user: String, completion: PersistorRamblCompletion)
@@ -64,8 +66,12 @@ internal class FireBasePersistor : Persistor
     
     func getChats(rambl: Rambl, completion: @escaping PersistorChatCompletion)
     {
-        // TODO: Get only the chats by the current user not all
-        let chatsQuery = (reference.child(FireBasePersistor.chatsKey).queryOrdered(byChild: "rambl").queryEqual(toValue:rambl.id))
+        let user = ContributionCreatorImplementor().user ?? ""
+        
+        // TODO: Should also do the opposite query (toValue:user + "_" + rambl.user )
+        let chatsQuery = (reference.child(FireBasePersistor.chatsKey)
+            .queryOrdered(byChild: "id").queryEqual(toValue:rambl.user + "_" + user)
+        )
         chatsQuery.observe(.value, with: { (snapshot) -> Void in
             if !snapshot.hasChildren() {
                 completion(nil, nil)

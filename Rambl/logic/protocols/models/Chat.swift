@@ -10,6 +10,5 @@ import Foundation
 
 public protocol Chat : Contribution
 {
-    var ramblAuthor:String {get}
-    var rambl:String {get}
+    var to:String {get}
 }

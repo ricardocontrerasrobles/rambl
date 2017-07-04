@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>NotificationServiceExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>Rambl.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>05831BDA1E6926F0004AB136</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>05B69ACB1E2AC8D100B52C1C</key>
 		<dict>
 			<key>primary</key>

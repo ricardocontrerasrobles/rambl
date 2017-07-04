@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SDWebImage
 
-class SettingsViewModel
+class SettingsViewModel: BaseViewModel
 {
     private let uploader: Uploader
     private let contributionCreator: ContributionCreator

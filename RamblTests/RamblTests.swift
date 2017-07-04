@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Rambl
+//@testable import Rambl
 
 class RamblTests: XCTestCase {
     

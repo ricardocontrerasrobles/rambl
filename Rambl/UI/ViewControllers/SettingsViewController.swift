@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class SettingsViewController: UIViewController
+class SettingsViewController: BaseViewController
 {
     @IBOutlet weak var statusInput: UITextField!
     @IBOutlet weak var userImage: UIImageView!
@@ -26,6 +26,11 @@ class SettingsViewController: UIViewController
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func getBaseViewModel() -> BaseViewModel?
+    {
+        return viewModel
     }
     
     @IBAction func dismiss(_ sender: Any)

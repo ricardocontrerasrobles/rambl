@@ -11,7 +11,7 @@ import MapKit
 
 typealias UpdateMapBinding = (MKCoordinateRegion, [Rambl]?) -> Void
 
-class MainViewModel
+class MainViewModel: BaseViewModel
 {
     public var updateMap: UpdateMapBinding?
     public var audioPlayerStatus: AudioPlayerStatusBinding?
@@ -26,8 +26,9 @@ class MainViewModel
     private static let spanDelta : CLLocationDegrees = 0.001
     private var currentRambl: Rambl?
     
-    init()
+    override init()
     {
+        super.init()
         setup()
     }
     
@@ -57,18 +58,18 @@ class MainViewModel
         }
     }
     
-    func getChatViewModel() -> ChatViewModel?
+    func getRamblChatViewModel() -> ChatViewModel?
     {
         guard let currentRambl = currentRambl else
         {
             return nil
         }
-        let chatViewModel = ChatViewModel(rambl: currentRambl,
-                                          audioRecorder: audioRecorder,
-                                          audioPlayer: audioPlayer,
-                                          persistor: persistor,
-                                          uploader: uploader,
-                                          contributionCreator: contributionCreator)
+        let chatViewModel = RamblChatViewModel(rambl: currentRambl,
+                                               audioRecorder: audioRecorder,
+                                               audioPlayer: audioPlayer,
+                                               persistor: persistor,
+                                               uploader: uploader,
+                                               contributionCreator: contributionCreator)
         return chatViewModel
     }
     

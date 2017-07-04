@@ -13,6 +13,7 @@
 		053BFAEE1E34240100C54B5A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 053BFAED1E34240100C54B5A /* GoogleService-Info.plist */; };
 		053BFAF11E343EE000C54B5A /* RamblMKPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053BFAF01E343EE000C54B5A /* RamblMKPointAnnotation.swift */; };
 		053BFAF51E343FF500C54B5A /* RamblMKPinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053BFAF41E343FF500C54B5A /* RamblMKPinAnnotationView.swift */; };
+		05471A2C1E45BB16002EF318 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05471A2B1E45BB16002EF318 /* UserNotifications.framework */; };
 		056A906E1E3D2FAD00D3F191 /* ChatImplementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A906D1E3D2FAD00D3F191 /* ChatImplementor.swift */; };
 		056A90721E3D3B5800D3F191 /* ContributionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A90711E3D3B5800D3F191 /* ContributionCreator.swift */; };
 		056A90741E3D433C00D3F191 /* ContributionCreatorImplementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A90731E3D433C00D3F191 /* ContributionCreatorImplementor.swift */; };
@@ -23,6 +24,11 @@
 		056A907E1E3DCF2200D3F191 /* Uploadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A907D1E3DCF2200D3F191 /* Uploadable.swift */; };
 		056A90801E3DD7A500D3F191 /* UploadableImplementor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056A907F1E3DD7A500D3F191 /* UploadableImplementor.swift */; };
 		057E2B201E33D27100BC518F /* Date+Rambl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057E2B1F1E33D27100BC518F /* Date+Rambl.swift */; };
+		059108531F09399B00AA2403 /* UserChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059108521F09399B00AA2403 /* UserChatViewModel.swift */; };
+		059108551F0939B100AA2403 /* RamblChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059108541F0939B100AA2403 /* RamblChatViewModel.swift */; };
+		0591085A1F093C0400AA2403 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059108591F093C0400AA2403 /* Router.swift */; };
+		0591085C1F093CD000AA2403 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0591085B1F093CD000AA2403 /* BaseViewController.swift */; };
+		0591085E1F093CE300AA2403 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0591085D1F093CE300AA2403 /* BaseViewModel.swift */; };
 		05B69AD01E2AC8D100B52C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69ACF1E2AC8D100B52C1C /* AppDelegate.swift */; };
 		05B69AE51E2AC8D200B52C1C /* RamblTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69AE41E2AC8D200B52C1C /* RamblTests.swift */; };
 		05B69AF01E2AC8D200B52C1C /* RamblUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B69AEF1E2AC8D200B52C1C /* RamblUITests.swift */; };
@@ -68,13 +74,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		05831BEE1E6928BE004AB136 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		051637FF1E2C7415005A5156 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		05169F8A1E306F46001C8835 /* RamblImplementor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RamblImplementor.swift; path = Models/RamblImplementor.swift; sourceTree = "<group>"; };
 		05169F911E3074A2001C8835 /* ModelsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsConstants.swift; path = Models/ModelsConstants.swift; sourceTree = "<group>"; };
+		0530223B1E84F77800A7BCFF /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		053BFAED1E34240100C54B5A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		053BFAF01E343EE000C54B5A /* RamblMKPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RamblMKPointAnnotation.swift; path = UI/Mapping/RamblMKPointAnnotation.swift; sourceTree = "<group>"; };
 		053BFAF41E343FF500C54B5A /* RamblMKPinAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RamblMKPinAnnotationView.swift; path = UI/Mapping/RamblMKPinAnnotationView.swift; sourceTree = "<group>"; };
+		05471A2B1E45BB16002EF318 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		055C55801E45B78D004B4043 /* Rambl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rambl.entitlements; sourceTree = "<group>"; };
 		056A906D1E3D2FAD00D3F191 /* ChatImplementor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatImplementor.swift; path = Models/ChatImplementor.swift; sourceTree = "<group>"; };
 		056A90711E3D3B5800D3F191 /* ContributionCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContributionCreator.swift; sourceTree = "<group>"; };
 		056A90731E3D433C00D3F191 /* ContributionCreatorImplementor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContributionCreatorImplementor.swift; path = Models/ContributionCreatorImplementor.swift; sourceTree = "<group>"; };
@@ -85,6 +107,11 @@
 		056A907D1E3DCF2200D3F191 /* Uploadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uploadable.swift; sourceTree = "<group>"; };
 		056A907F1E3DD7A500D3F191 /* UploadableImplementor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadableImplementor.swift; path = Models/UploadableImplementor.swift; sourceTree = "<group>"; };
 		057E2B1F1E33D27100BC518F /* Date+Rambl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Rambl.swift"; path = "logic/extensions/Date+Rambl.swift"; sourceTree = "<group>"; };
+		059108521F09399B00AA2403 /* UserChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChatViewModel.swift; sourceTree = "<group>"; };
+		059108541F0939B100AA2403 /* RamblChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RamblChatViewModel.swift; sourceTree = "<group>"; };
+		059108591F093C0400AA2403 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = UI/Router/Router.swift; sourceTree = "<group>"; };
+		0591085B1F093CD000AA2403 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0591085D1F093CE300AA2403 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		05B69ACC1E2AC8D100B52C1C /* Rambl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B69ACF1E2AC8D100B52C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05B69ADB1E2AC8D100B52C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05471A2C1E45BB16002EF318 /* UserNotifications.framework in Frameworks */,
 				051638001E2C7415005A5156 /* MapKit.framework in Frameworks */,
 				5436B4676E8A6E991EB3DE0F /* Pods_Rambl.framework in Frameworks */,
 			);
@@ -154,6 +182,7 @@
 		051637FE1E2C7415005A5156 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05471A2B1E45BB16002EF318 /* UserNotifications.framework */,
 				051637FF1E2C7415005A5156 /* MapKit.framework */,
 				5B79467CE207E8DFA7294EAC /* Pods_Rambl.framework */,
 				DB88B9E2C23C93C187B8169F /* Pods_RamblTests.framework */,
@@ -190,6 +219,14 @@
 			name = extension;
 			sourceTree = "<group>";
 		};
+		059108561F093BCC00AA2403 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				059108591F093C0400AA2403 /* Router.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
 		05B69AC31E2AC8D100B52C1C = {
 			isa = PBXGroup;
 			children = (
@@ -215,11 +252,13 @@
 		05B69ACE1E2AC8D100B52C1C /* Rambl */ = {
 			isa = PBXGroup;
 			children = (
+				055C55801E45B78D004B4043 /* Rambl.entitlements */,
 				05B69ACF1E2AC8D100B52C1C /* AppDelegate.swift */,
 				05B69AFD1E2B086900B52C1C /* logic */,
 				05B69B301E2B097C00B52C1C /* UI */,
 				05B69ADB1E2AC8D100B52C1C /* Info.plist */,
 				053BFAED1E34240100C54B5A /* GoogleService-Info.plist */,
+				0530223B1E84F77800A7BCFF /* Config.xcconfig */,
 			);
 			path = Rambl;
 			sourceTree = "<group>";
@@ -355,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				053BFAEF1E343E8300C54B5A /* Mapping */,
+				059108561F093BCC00AA2403 /* Router */,
 				05C366321E2B0ACA00B21C12 /* Storyboards */,
 				05C366371E2B0BAD00B21C12 /* ViewControllers */,
 				05C366391E2B0BAD00B21C12 /* ViewModels */,
@@ -375,6 +415,7 @@
 		05C366371E2B0BAD00B21C12 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0591085B1F093CD000AA2403 /* BaseViewController.swift */,
 				056A90751E3D910E00D3F191 /* ChatViewController.swift */,
 				05C366381E2B0BAD00B21C12 /* MainViewController.swift */,
 				056A90791E3DC0F200D3F191 /* SettingsViewController.swift */,
@@ -386,7 +427,10 @@
 		05C366391E2B0BAD00B21C12 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0591085D1F093CE300AA2403 /* BaseViewModel.swift */,
 				056A90771E3D912C00D3F191 /* ChatViewModel.swift */,
+				059108541F0939B100AA2403 /* RamblChatViewModel.swift */,
+				059108521F09399B00AA2403 /* UserChatViewModel.swift */,
 				05C3663A1E2B0BAD00B21C12 /* MainViewModel.swift */,
 				056A907B1E3DC11600D3F191 /* SettingsViewModel.swift */,
 			);
@@ -427,6 +471,7 @@
 				05B69ACA1E2AC8D100B52C1C /* Resources */,
 				ED1042A89AB34DFB8F6F5D2D /* [CP] Embed Pods Frameworks */,
 				A760A6DF6771C947B1D364BD /* [CP] Copy Pods Resources */,
+				05831BEE1E6928BE004AB136 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -492,6 +537,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -658,12 +706,14 @@
 				05C3663B1E2B0BAD00B21C12 /* MainViewController.swift in Sources */,
 				05B69B241E2B089500B52C1C /* FireBasePersistor.swift in Sources */,
 				05D532351E347F7F0044B61F /* RamblLogicBridge.swift in Sources */,
+				0591085A1F093C0400AA2403 /* Router.swift in Sources */,
 				056A907E1E3DCF2200D3F191 /* Uploadable.swift in Sources */,
 				05B69B2C1E2B089500B52C1C /* Chat.swift in Sources */,
 				05B69B2B1E2B089500B52C1C /* Uploader.swift in Sources */,
 				056A90801E3DD7A500D3F191 /* UploadableImplementor.swift in Sources */,
 				05B69B231E2B089500B52C1C /* CoreLocationLocator.swift in Sources */,
 				05169F921E3074A2001C8835 /* ModelsConstants.swift in Sources */,
+				0591085C1F093CD000AA2403 /* BaseViewController.swift in Sources */,
 				057E2B201E33D27100BC518F /* Date+Rambl.swift in Sources */,
 				056A90781E3D912C00D3F191 /* ChatViewModel.swift in Sources */,
 				05B69AD01E2AC8D100B52C1C /* AppDelegate.swift in Sources */,
@@ -675,14 +725,17 @@
 				056A90721E3D3B5800D3F191 /* ContributionCreator.swift in Sources */,
 				056A906E1E3D2FAD00D3F191 /* ChatImplementor.swift in Sources */,
 				056A907C1E3DC11600D3F191 /* SettingsViewModel.swift in Sources */,
+				059108551F0939B100AA2403 /* RamblChatViewModel.swift in Sources */,
 				05B69B221E2B089500B52C1C /* AVFoundationAudioRecorder.swift in Sources */,
 				05CD97151E340F480033C0A7 /* GeohashBox.swift in Sources */,
 				05B69B281E2B089500B52C1C /* AudioRecorder.swift in Sources */,
 				05B69B261E2B089500B52C1C /* AWSS3Uploader.swift in Sources */,
+				059108531F09399B00AA2403 /* UserChatViewModel.swift in Sources */,
 				05B69B2A1E2B089500B52C1C /* Persistor.swift in Sources */,
 				056A907A1E3DC0F200D3F191 /* SettingsViewController.swift in Sources */,
 				05B69B291E2B089500B52C1C /* Locator.swift in Sources */,
 				053BFAF51E343FF500C54B5A /* RamblMKPinAnnotationView.swift in Sources */,
+				0591085E1F093CE300AA2403 /* BaseViewModel.swift in Sources */,
 				05C3663C1E2B0BAD00B21C12 /* MainViewModel.swift in Sources */,
 				056A90741E3D433C00D3F191 /* ContributionCreatorImplementor.swift in Sources */,
 				05B69B271E2B089500B52C1C /* AudioPlayer.swift in Sources */,
@@ -765,6 +818,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PARENT_APP_BUNDLE_IDENTIFIER = com.mylast.test;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -808,6 +862,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PARENT_APP_BUNDLE_IDENTIFIER = com.mylast.test;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -819,12 +874,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A6FC3823F488D4B7C6E6EDC1 /* Pods-Rambl.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Rambl/Rambl.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BYFTRD4RGW;
 				INFOPLIST_FILE = Rambl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PARENT_APP_BUNDLE_IDENTIFIER = com.fromtarget.withlove;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rcrmobileprojects.Rambl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -837,14 +895,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B427086D3ED99E3DB4A95C9F /* Pods-Rambl.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Rambl/Rambl.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = BYFTRD4RGW;
 				INFOPLIST_FILE = Rambl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PARENT_APP_BUNDLE_IDENTIFIER = com.fromtarget.withlove;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rcrmobileprojects.Rambl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -10,16 +10,15 @@ import Foundation
 
 internal struct ChatImplementor : Chat
 {
-    var ramblAuthor: String
+    var to: String
     var user: String
     var date: Date
-    var rambl: String
     var mediaType: UploadMediaType
     var localURL: URL?
     var id:String {
         get
         {
-            return rambl + "_" + user + "_" + date.idDateString()
+            return user + "_" + to
         }
     }
     var path: String {
@@ -33,10 +32,10 @@ internal struct ChatImplementor : Chat
     {
         return [
             ModelsConstants.userKey : self.user,
-            ModelsConstants.ramblKey : self.rambl,
-            ModelsConstants.ramblAuthorKey : self.ramblAuthor,
+            ModelsConstants.toKey : self.to,
             ModelsConstants.dateKey : self.date.backendDateString(),
             ModelsConstants.mediaTypeKey : self.mediaType.rawValue,
+            ModelsConstants.idKey : self.id
         ]
     }
     
@@ -49,10 +48,9 @@ internal struct ChatImplementor : Chat
             return nil
         }
         
-        let chat = ChatImplementor(ramblAuthor: chatDict[ModelsConstants.ramblAuthorKey]!,
+        let chat = ChatImplementor(to: chatDict[ModelsConstants.toKey]!,
                                    user: chatDict[ModelsConstants.userKey]!,
                                    date: date,
-                                   rambl: chatDict[ModelsConstants.ramblKey]!,
                                    mediaType: mediaType,
                                    localURL: nil)
         return chat
@@ -67,8 +65,7 @@ private extension ChatImplementor
             chatDict[ModelsConstants.userKey] != nil &&
                 chatDict[ModelsConstants.dateKey] != nil &&
                 chatDict[ModelsConstants.mediaTypeKey] != nil &&
-                chatDict[ModelsConstants.ramblKey] != nil &&
-                chatDict[ModelsConstants.ramblAuthorKey] != nil
+                chatDict[ModelsConstants.toKey] != nil
         return isValid
     }
 }

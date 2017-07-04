@@ -33,7 +33,7 @@ internal struct ContributionCreatorImplementor : ContributionCreator
                     ramblAuthor: String,
                     rambl: String) -> Chat?
     {
-        let chat = ChatImplementor(ramblAuthor: ramblAuthor, user: user, date: date, rambl: rambl, mediaType: type, localURL: localURL)
+        let chat = ChatImplementor(to: ramblAuthor, user: user, date: date, mediaType: type, localURL: localURL)
         return chat
     }
     

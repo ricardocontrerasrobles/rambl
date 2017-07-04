@@ -10,17 +10,17 @@ import Foundation
 
 typealias UpdateChatListBinding = () -> Void
 
-class ChatViewModel
+class ChatViewModel: BaseViewModel
 {
-    public var updateChatList: UpdateChatListBinding?
-    public var audioPlayerStatus: AudioPlayerStatusBinding?
-    private let rambl: Rambl
+    var updateChatList: UpdateChatListBinding?
+    var audioPlayerStatus: AudioPlayerStatusBinding?
+    let rambl: Rambl
     private let audioRecorder: AudioRecorder
     private var audioPlayer: AudioPlayer
-    private let persistor: Persistor
+    let persistor: Persistor
     private let uploader: Uploader
     private let contributionCreator: ContributionCreator
-    private var chats: [Chat] = []
+    var chats: [Chat] = []
     
     init(rambl: Rambl,
          audioRecorder: AudioRecorder,
@@ -35,7 +35,8 @@ class ChatViewModel
         self.persistor = persistor
         self.uploader = uploader
         self.contributionCreator = contributionCreator
-        setup()
+        super.init()
+        self.setup()
     }
     
     func startRecording()
@@ -64,6 +65,7 @@ class ChatViewModel
         guard index >= 0 && index < chats.count else
         {
             assert(false, "This should not happen")
+            return ""
         }
         
         let chat = chats[index]
@@ -76,9 +78,15 @@ class ChatViewModel
         guard index >= 0 && index < chats.count else
         {
             assert(false, "This should not happen")
+            return
         }
         let chat = chats[index]
         play(contribution: chat)
+    }
+    
+    internal func setup()
+    {
+        // Template method
     }
     
     private func play(contribution: Contribution)
@@ -87,23 +95,6 @@ class ChatViewModel
         {
             audioPlayer.audioPlayerStatus = audioPlayerStatus
             audioPlayer.play(url: url)
-        }
-    }
-    
-    private func setup()
-    {
-        self.persistor.getChats(rambl: rambl) { [weak self] (newChats, error) in
-            guard error == nil else
-            {
-                print(error!)
-                return
-            }
-            
-            if let newChats = newChats
-            {
-                self?.chats = newChats
-                self?.updateChatList?()
-            }
         }
     }
     

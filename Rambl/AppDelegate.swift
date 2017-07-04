@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import AWSS3
 //import AWSCognitoIdentityProvider
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         configureFirebase()
         configureAWS()
+        requestNotificationsAuthorization()
         return true
     }
     
@@ -50,6 +52,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication)
     {
     }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)
+    {        
+    }
+    
+    public func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error)
+    {
+    }
 }
 
 private extension AppDelegate
@@ -58,6 +68,7 @@ private extension AppDelegate
         FIRApp.configure()
     }
     
+    // TODO: Hide credentials
     func configureAWS() {
         let credentialsProvider = AWSCognitoCredentialsProvider(
             regionType: AWSRegionType.usEast1,
@@ -66,6 +77,33 @@ private extension AppDelegate
             region: AWSRegionType.usEast1,
             credentialsProvider: credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+    }
+    
+    func requestNotificationsAuthorization()
+    {
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (accepted, error) in
+            if !accepted {
+                print("Notification access denied.")
+            }
+            else
+            {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
+    }
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Swift.Void)
+    {
+        
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void)
+    {
         
     }
 }

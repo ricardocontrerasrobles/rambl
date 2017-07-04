@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatViewController: UIViewController
+class ChatViewController: BaseViewController
 {
     @IBOutlet weak var table: UITableView!
     var viewModel: ChatViewModel?
@@ -22,6 +22,11 @@ class ChatViewController: UIViewController
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func getBaseViewModel() -> BaseViewModel?
+    {
+        return viewModel
     }
     
     @IBAction func startRecording(_ sender: Any)
@@ -69,7 +74,7 @@ private extension ChatViewController
             self?.table.reloadData()
         }
         
-        viewModel?.audioPlayerStatus = { [weak self] (status) in
+        viewModel?.audioPlayerStatus = { (status) in
             switch status
             {
             case .Playing:
