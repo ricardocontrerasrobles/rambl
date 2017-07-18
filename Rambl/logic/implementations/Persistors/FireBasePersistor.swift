@@ -11,9 +11,9 @@ import Firebase
 
 internal class FireBasePersistor : Persistor
 {
-    internal lazy var reference: FIRDatabaseReference =
+    internal lazy var reference: DatabaseReference =
     {
-        return FIRDatabase.database().reference()
+        return Database.database().reference()
     }()
 
     private static let ramblsKey = "rambls"

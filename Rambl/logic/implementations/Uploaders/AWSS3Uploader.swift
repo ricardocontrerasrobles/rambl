@@ -17,23 +17,26 @@ internal class AWSS3Uploader : Uploader
     
     func upload(uploadable: Uploadable, completion: @escaping UploaderCompletion)
     {
-        let uploadRequest = AWSS3TransferManagerUploadRequest()
-        uploadRequest?.body = uploadable.localURL
-        uploadRequest?.key = uploadable.path
-        uploadRequest?.bucket = AWSS3Uploader.bucket
-        uploadRequest?.contentType = uploadable.mediaType.rawValue + "/" + uploadable.mediaType.getExtension()
-        uploadRequest?.acl = AWSS3ObjectCannedACL.publicRead
+        guard let uploadRequest = AWSS3TransferManagerUploadRequest(),
+            let localURL = uploadable.localURL else {
+            completion(uploadable, nil, nil)
+            return
+        }
+        uploadRequest.body = localURL
+        uploadRequest.key = uploadable.path
+        uploadRequest.bucket = AWSS3Uploader.bucket
+        uploadRequest.contentType = uploadable.mediaType.rawValue + "/" + uploadable.mediaType.getExtension()
+        uploadRequest.acl = AWSS3ObjectCannedACL.publicRead
         
         let transferManager = AWSS3TransferManager.default()
-        transferManager?.upload(uploadRequest).continue(_:) { [weak self] (task) -> AnyObject! in
-            
+        transferManager.upload(uploadRequest).continueWith { [weak self] (task) -> Any? in
             guard task.error == nil else
             {
                 completion(uploadable, nil, task.error)
                 return uploadRequest
             }
             
-            guard task.exception == nil, task.result != nil,
+            guard task.result != nil,
                 let url = self?.uploadableURL(uploadable: uploadable) else
             {
                 completion(uploadable, nil, nil)

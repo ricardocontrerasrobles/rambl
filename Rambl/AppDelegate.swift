@@ -65,16 +65,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 private extension AppDelegate
 {
     func configureFirebase() {
-        FIRApp.configure()
+        FirebaseApp.configure()
     }
     
     // TODO: Hide credentials
     func configureAWS() {
         let credentialsProvider = AWSCognitoCredentialsProvider(
-            regionType: AWSRegionType.usEast1,
+            regionType: AWSRegionType.USEast1,
             identityPoolId: "us-east-1:52d5acb5-5830-4a9c-a80b-4c6c280af775")
         let configuration = AWSServiceConfiguration(
-            region: AWSRegionType.usEast1,
+            region: AWSRegionType.USEast1,
             credentialsProvider: credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         
@@ -89,7 +89,9 @@ private extension AppDelegate
             }
             else
             {
-                UIApplication.shared.registerForRemoteNotifications()
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
             }
         }
     }
